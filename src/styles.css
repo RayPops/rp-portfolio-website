@@ -1,0 +1,203 @@
+/**
+* CSS file to hold styles that apply across the application
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+div#main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  position: relative;
+}
+
+section.dark {
+  min-height: 100vh;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+section.light {
+  color: black;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 8rem 0;
+}
+
+section img.background {
+  width: 100vmax;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  object-fit: cover;
+}
+
+h1 {
+  font-weight: 300, medium;
+  text-align: center;
+  font-size: 7rem;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+
+p.large {
+  font-size: 24px;
+}
+
+p.small {
+  font-size: 15px;
+}
+
+hr {
+  margin: 2.5rem;
+}
+
+li {
+  line-height: 1.7;
+}
+
+li::marker {
+  color: #4e567e;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+.container {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 330px 300px;
+  grid-gap: 20px;
+}
+
+.container .box {
+  border-radius: 10px;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid rgb(204, 204, 204);
+  text-align: center;
+}
+
+img.socialIcon {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
