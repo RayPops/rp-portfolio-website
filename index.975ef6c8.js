@@ -29133,7 +29133,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 const downloadResume = ()=>{
     const link = document.createElement("a");
-    link.href = "https://github.com/RayPops/rp-personal-website/blob/main/src/cv.pdf";
+    link.href = "https://github.com/RayPops/rp-portfolio-website/blob/main/src/cv.pdf";
     link.target = "_blank";
     document.body.appendChild(link);
     link.click();
